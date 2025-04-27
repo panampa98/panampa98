@@ -129,13 +129,18 @@ footer {
 
 
 #social-links {
-  margin-top: 15px;
+  display: flex;                /* Usamos Flexbox para centrar los íconos */
+  justify-content: center;      /* Centra los íconos horizontalmente */
+  align-items: center;          /* Alinea los íconos verticalmente */
+  margin-top: 20px;             /* Espaciado superior */
+  gap: 20px;
 }
 
 .social-icon {
   width: 24px;
   height: 24px;
-  margin: 0 30px;
+  color: white;
+  margin: 0 10px;
   transition: transform 0.3s;
 }
 
