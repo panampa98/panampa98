@@ -41,7 +41,9 @@ header {
 
 .language-button {
   background: none;
-  border: 1px solid #ccc;
+  color: var(--text-color);
+  border-radius: 10px;
+  border: 1px solid #eee;
   padding: 5px 10px;
   margin-left: 5px;
   cursor: pointer;
