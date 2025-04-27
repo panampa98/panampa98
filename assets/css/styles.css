@@ -137,8 +137,7 @@ footer {
 }
 
 .social-icon {
-  width: 24px;
-  height: 24px;
+  font-size: 20px;
   color: white;
   margin: 0 10px;
   transition: transform 0.3s;
