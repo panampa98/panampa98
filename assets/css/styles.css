@@ -36,27 +36,24 @@ header {
 }
 
 .language-button {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 10px 20px;
-  margin-left: 10px;
+  background: none;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin-left: 5px;
   cursor: pointer;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Sombra sutil */
+  transition: background 0.3s, color 0.3s;
 }
 
 .language-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6); /* Sombra con azul en hover */
+  background-color: #eee;
 }
 
 .active-language {
-  background-color: #007bff; /* Fondo azul para el botón activo */
+  background-color: #007BFF;
   color: white;
-  border-color: #007bff; /* Mismo color para el borde */
+  border-color: #007BFF;
 }
+
 
 main {
   padding: 2rem 0;
