@@ -133,9 +133,9 @@ footer {
 }
 
 .social-icon {
-  width: 32px;
-  height: 32px;
-  margin: 0 10px;
+  width: 24px;
+  height: 24px;
+  margin: 0 30px;
   transition: transform 0.3s;
 }
 
