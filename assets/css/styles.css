@@ -72,11 +72,12 @@ main {
 }
 
 .card {
-  background-color: var(--card-background);
+  background-color: var(--card-background, #1c1c1c); /* Fallback a #1c1c1c si no se puede usar la variable */
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
+  color: #fff;  /* Aseguramos que el texto dentro de las cards también sea blanco */
 }
 
 .card:hover {
