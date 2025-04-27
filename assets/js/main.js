@@ -34,18 +34,6 @@ function setLanguage(lang) {
   document.getElementById("projects-title").textContent = content[lang].projectsTitle;
   document.getElementById("contact-title").textContent = content[lang].contactTitle;
 
-  const projectsGrid = document.getElementById("projects-grid");
-  projectsGrid.innerHTML = '';
-  content[lang].projects.forEach(project => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <h3>${project.title}</h3>
-      <p>${project.desc}</p>
-    `;
-    projectsGrid.appendChild(card);
-  });
-
   // update active lang button
   document.querySelectorAll('.language-button').forEach(btn => {
     btn.classList.remove('active-language');
