@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #007acc;
-  --background-color: #f5f5f5;
-  --text-color: #333333;
+  --primary-color: #0d4cd3;
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
 }
 
 /* Fondo oscuro global */
@@ -13,8 +13,8 @@ html, body {
 
 body {
   background-color: #1e1e1e; /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
-  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
 }
 
 h1, h2, h3, p {
@@ -28,8 +28,8 @@ h1, h2, h3, p {
 }
 
 header {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: transparent;
+  color: var(--text-color);
   padding: 1rem 0;
 }
 
@@ -51,7 +51,8 @@ header {
 }
 
 .language-button:hover {
-  background-color: #eee;
+  background-color: var(--primary-color);
+  border: none;
 }
 
 .active-language {
@@ -115,9 +116,8 @@ main {
 }
 
 footer {
-  text-align: center;
+  text-align: right;
   padding: 1rem 0;
-  background-color: var(--primary-color);
   color: white;
   margin-top: 2rem;
 }
@@ -132,6 +132,37 @@ footer {
   .language-selector {
     margin-top: 0.5rem;
   }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  /* Ajustes de redes sociales en pantallas pequeñas */
+  #social-links {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* Ajustar tamaño de la imagen si es necesario */
+  .col img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Ajustar el tamaño del texto */
+  #name {
+    font-size: 35px;
+  }
+
+  #title {
+    font-size: 25px;
+  }
 }
 
 
@@ -144,7 +175,7 @@ footer {
 }
 
 .social-icon {
-  font-size: 20px;
+  font-size: 15px;
   color: white;
   margin: 0 10px;
   transition: transform 0.3s;
@@ -153,3 +184,77 @@ footer {
 .social-icon:hover {
   transform: scale(1.2);
 }
+
+
+.floating-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  background: rgba(2, 8, 22, 0.863);
+  padding: 10px 40px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item a {
+  color: var(--primary-color);
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-item a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+/* Círculo sobre el ícono con hover */
+.nav-item a:hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(0, 123, 255, 0.2);
+  z-index: -1; /* Asegura que el círculo esté detrás del ícono */
+  transform: translate(-50%, -50%);
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 140%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color, #3498db);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+
+.nav-item:hover .tooltip {
+  opacity: 1;
+  bottom: 150%;
+}
+

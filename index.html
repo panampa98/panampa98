@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="UTF-8">
@@ -11,26 +12,63 @@
 <body>
 
   <header>
-    <div class="container header-container">
+    <div class="container">
       <div id="language-selector" style="display: flex; justify-content: flex-end; align-items: center;">
-         <label>Select Language:</label>
+         <label>Select Language</label>
          <button id="en-btn" class="language-button" onclick="setLanguage('en')">EN</button>
          <button id="es-btn" class="language-button" onclick="setLanguage('es')">ES</button>
        </div>
-    </div>
   </header>
+
+  <nav class="floating-nav">
+    <div class="nav-item">
+      <a href="#about"><i class="fas fa-user"></i></a>
+      <span class="tooltip">About Me</span>
+    </div>
+    <div class="nav-item">
+      <a href="#projects"><i class="fas fa-briefcase"></i></a>
+      <span class="tooltip">Projects</span>
+    </div>
+    <div class="nav-item">
+      <a href="#contact"><i class="fas fa-envelope"></i></a>
+      <span class="tooltip">Contact</span>
+    </div>
+  </nav>  
 
   <main class="container">
     <section id="about">
-      <h2 id="about-title">About Me</h2>
-      <p id="about-description">
-        I am a passionate data scientist with experience in Machine Learning, Deep Learning, Generative AI, Business Intelligence, and Graph Theory.
-      </p>
-      <div id="social-links">
-        <a href="https://www.linkedin.com/in/pold-anampa-saravia" target="_blank" class="social-icon"><i class="fab fa-linkedin fa-2x"></i></a>
-        <a href="https://github.com/panampa98" target="_blank" class="social-icon"><i class="fab fa-github fa-2x"></i></a>
-        <a href="https://www.tiktok.com/@devpold" target="_blank" class="social-icon"><i class="fab fa-tiktok fa-2x"></i></a>
+      <div class="row" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center; margin-top: 20px;">
+        
+        <!-- Foto de perfil -->
+        <div class="col" style="flex: 1 1 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;">
+          <!-- Foto -->
+          <div>
+            <img src="assets/images/photo.jpg" alt="Mi Foto"
+            style="width: 250px; height: 250px; object-fit: cover; border-radius: 50%; border: none;">
+          </div>
+
+          <!-- Redes sociales -->
+          <div id="social-links">
+            <a href="https://www.linkedin.com/in/pold-anampa-saravia" target="_blank" class="social-icon"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/panampa98" target="_blank" class="social-icon"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.tiktok.com/@devpold" target="_blank" class="social-icon"><i class="fab fa-tiktok fa-2x"></i></a>
+          </div>
+        </div>
+      
+        <!-- Info personal -->
+        <div class="col" style="flex: 3 1 300px;">
+          <div>
+            <h1 id="name" style="color: var(--primary-color); font-size: 50px; font-weight: 800;">Pold Anampa</h1>
+            <p id="title" style="font-size: 30px; font-weight: 600;">Data Scientist</p>
+          </div>
+          <h2 id="about-title">About Me</h2>
+          <p id="about-description">
+            I am a passionate data scientist with experience in Machine Learning, Deep Learning, Generative AI, Business Intelligence, and Graph Theory.
+          </p>
+        </div>
       </div>
+      
+      
     </section>
 
     <section id="projects">
@@ -88,10 +126,30 @@
     </section>
 
 
-    <section id="contact">
-      <h2 id="contact-title">Contact</h2>
-      <p>Email: dev.pold98@gmail.com | poldanampa@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/panampa98" target="_blank">panampa98</a></p>
+    <section id="contact" style="padding: 50px 0;">
+      <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center; letter-spacing: 1.5px;">
+        <h2 style="color: var(--primary-color); font-size: 36px; font-weight: 800; margin-bottom: 20px;">Contact Me</h2>
+        <p style="font-size: 18px; margin-bottom: 40px;">Feel free to reach out to me through any of the platforms below or via email.</p>
+    
+        <!-- Social Links -->
+        <div id="social-links" style="margin-bottom: 30px;">
+          <a href="https://www.linkedin.com/in/pold-anampa-saravia" target="_blank" class="social-icon" style="margin: 0 15px; color: #0077b5; font-size: 30px; transition: color 0.3s;">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/panampa98" target="_blank" class="social-icon" style="margin: 0 15px; color: #f3f3f3; font-size: 30px; transition: color 0.3s;">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.tiktok.com/@devpold" target="_blank" class="social-icon" style="margin: 0 15px; color: #000; font-size: 30px; transition: color 0.3s;">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+    
+        <!-- Contact Emails -->
+        <div id="emails" style="font-size: 18px; color: #555;">
+          <p><strong>Email:</strong> <a href="mailto:dev.pold98@gmail.com" style="color: #3498db; text-decoration: none; transition: color 0.3s;">dev.pold98@gmail.com</a></p>
+          <p><strong>Email:</strong> <a href="mailto:poldanampa@gmail.com" style="color: #3498db; text-decoration: none; transition: color 0.3s;">poldanampa@gmail.com</a></p>
+        </div>
+      </div>
     </section>
   </main>
 
