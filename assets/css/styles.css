@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #0d4cd3;
+  --primary-color: #0d52d3;
   --background-color: #1e1e1e;
   --text-color: #ffffff;
 }
@@ -194,10 +194,10 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 50px;
-  background: rgba(2, 8, 22, 0.863);
+  background: rgba(3, 7, 17, 0.445);
   padding: 10px 40px;
   border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.555);
   z-index: 1000;
   backdrop-filter: blur(5px);
 }
@@ -228,7 +228,7 @@ footer {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: rgba(0, 123, 255, 0.2);
+  background-color: rgba(5, 36, 70, 0.2);
   z-index: -1; /* Asegura que el círculo esté detrás del ícono */
   transform: translate(-50%, -50%);
 }
