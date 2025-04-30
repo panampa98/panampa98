@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #1b68dd;
+  --primary-color: #2f76e0;
   --background-color: #1e1e1e;
   --text-color: #ffffff;
 }
@@ -55,10 +55,10 @@ header {
   border: none;
 }
 
-.active-language {
-  background-color: #007BFF;
-  color: white;
-  border-color: #007BFF;
+.language-button.active-language {
+  background-color: #007BFF !important;
+  color: white !important;
+  border-color: #007BFF !important;
 }
 
 

@@ -28,10 +28,10 @@ const content = {
 };
 
 function setLanguage(lang) {
-  document.getElementById("site-title").textContent = content[lang].siteTitle;
+  // document.getElementById("site-title").textContent = content[lang].siteTitle;
   document.getElementById("about-title").textContent = content[lang].aboutTitle;
   document.getElementById("about-description").textContent = content[lang].aboutDescription;
-  document.getElementById("projects-title").textContent = content[lang].projectsTitle;
+  // document.getElementById("projects-title").textContent = content[lang].projectsTitle;
   document.getElementById("contact-title").textContent = content[lang].contactTitle;
 
   // update active lang button
