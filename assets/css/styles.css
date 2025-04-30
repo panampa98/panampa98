@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #0d52d3;
+  --primary-color: #1b68dd;
   --background-color: #1e1e1e;
   --text-color: #ffffff;
 }
@@ -108,6 +108,9 @@ main {
 .card h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1.5px;
 }
 
 .card p {
